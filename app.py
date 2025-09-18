@@ -24,7 +24,7 @@ if uploaded:
 
     # chunk
     st.info("Extracted text. Chunking...")
-    chunks = chunk_text(raw, words_per_chunk=400)
+    chunks = chunk_text(raw, words_per_chunk=1000)
     st.session_state["chunks"] = chunks     # ✅ save to session state
     st.write(f"Created {len(chunks)} chunks.")
 
@@ -125,3 +125,4 @@ with tab4:
                 st.write("---")
     else:
         st.info("Upload document and create embeddings to enable chat.")
+
